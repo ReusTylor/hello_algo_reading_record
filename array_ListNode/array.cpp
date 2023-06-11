@@ -1,12 +1,3 @@
-// 存储在栈上
-int arr[5];
-int nums[5] = {1, 2, 3, 4, 5};
-
-// 存储在堆上
-int* arr1 = new int[5];
-int* arr2 = new int[5]{1, 2, 3, 4, 5};
-
-
 /*
     数组优点：
      1. 访问元素更高效
@@ -16,6 +7,19 @@ int* arr2 = new int[5]{1, 2, 3, 4, 5};
      2. 插入或者删除元素效率低下
 */
 
+/*
+    数组典型应用
+     1. 随机访问
+     2. 二分查找
+     3. 深度学习
+*/
+// 存储在栈上
+int arr[5];
+int nums[5] = {1, 2, 3, 4, 5};
+
+// 存储在堆上
+int* arr1 = new int[5];
+int* arr2 = new int[5]{1, 2, 3, 4, 5};
 
 
 // 返回一个特定的元素
@@ -58,7 +62,7 @@ void remove(int* nums, int size, int index, int num){
     }
     size--;
 }
-
+// 插入和删除具有一些缺点 时间复杂度高，丢失元素（超出数组长度范围的元素会丢失），内存浪费
 
 //数组遍历
 void traverse(int* nums, int size){
