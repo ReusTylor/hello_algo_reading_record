@@ -5,6 +5,11 @@
     缺点：
      1.节点访问效率低
      2.内存占用较大
+
+    常见链表类型
+     单向
+     环形
+     双向
 */
 struct ListNode
 {
@@ -64,3 +69,13 @@ int find(ListNode* head, int target){
     }
     return -1;
 }
+
+
+//双向链表结构体
+struct listnode
+{
+    int val;
+    listnode* next;
+    listnode* prev;
+    listnode(int x):val(x), next(nullptr), prev(nullptr){} // 构造函数
+};
