@@ -108,14 +108,14 @@ public:
         if(queSize == queCapacity)
             cout << "队列已满" << endl;
             return;
-        int rear = (front + queSize) % queCapacity;
+        int rear = (front + queSize) % queCapacity; // 取余操作，实现rear越过数组尾部后回到头部
         num[rear] = num;
         queSize++;
     }
 
     void pop(){
         int num = peek();
-        front = (front + 1) % queCapacity;
+        front = (front + 1) % queCapacity; // 队首指针后移一位，若越过尾部则返回到数组头部
         queSize--;
     }
     int peek(){
